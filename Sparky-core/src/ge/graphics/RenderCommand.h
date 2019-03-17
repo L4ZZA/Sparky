@@ -3,7 +3,7 @@
 #include "ge/Common.h"
 #include "Mesh.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	struct SP_API RendererUniform
 	{

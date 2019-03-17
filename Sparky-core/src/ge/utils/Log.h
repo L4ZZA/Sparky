@@ -36,7 +36,7 @@ namespace std
 //	- Logging to other destinations (eg. files)
 //	- Include (almost) ALL Sparky class types
 //	- More...
-namespace sp { namespace internal {
+namespace ge { namespace internal {
 	
 	static char to_string_buffer[1024 * 10];
 	static char sprintf_buffer[1024 * 10];
@@ -257,7 +257,7 @@ namespace sp { namespace internal {
 	template <typename First>
 	static void print_log_internal(char* buffer, int32& position, First&& first)
 	{
-		const char* formatted = sp::internal::to_string<First>(first);
+		const char* formatted = ge::internal::to_string<First>(first);
 		int32 length = strlen(formatted);
 		memcpy(&buffer[position], formatted, length);
 		position += length;
@@ -266,7 +266,7 @@ namespace sp { namespace internal {
 	template <typename First, typename... Args>
 	static void print_log_internal(char* buffer, int32& position, First&& first, Args&&... args)
 	{
-		const char* formatted = sp::internal::to_string<First>(first);
+		const char* formatted = ge::internal::to_string<First>(first);
 		int32 length = strlen(formatted);
 		memcpy(&buffer[position], formatted, length);
 		position += length;
@@ -300,32 +300,32 @@ namespace sp { namespace internal {
 #endif
 
 #if SPARKY_LOG_LEVEL >= SPARKY_LOG_LEVEL_FATAL
-#define SP_FATAL(...) sp::internal::log_message(SPARKY_LOG_LEVEL_FATAL, true, "SPARKY:    ", __VA_ARGS__)
-#define _SP_FATAL(...) sp::internal::log_message(SPARKY_LOG_LEVEL_FATAL, false, __VA_ARGS__)
+#define SP_FATAL(...) ge::internal::log_message(SPARKY_LOG_LEVEL_FATAL, true, "SPARKY:    ", __VA_ARGS__)
+#define _SP_FATAL(...) ge::internal::log_message(SPARKY_LOG_LEVEL_FATAL, false, __VA_ARGS__)
 #else
 #define SP_FATAL(...)
 #define _SP_FATAL(...)
 #endif
 
 #if SPARKY_LOG_LEVEL >= SPARKY_LOG_LEVEL_ERROR
-#define SP_ERROR(...) sp::internal::log_message(SPARKY_LOG_LEVEL_ERROR, true, "SPARKY:    ", __VA_ARGS__)
-#define _SP_ERROR(...) sp::internal::log_message(SPARKY_LOG_LEVEL_ERROR, false, __VA_ARGS__)
+#define SP_ERROR(...) ge::internal::log_message(SPARKY_LOG_LEVEL_ERROR, true, "SPARKY:    ", __VA_ARGS__)
+#define _SP_ERROR(...) ge::internal::log_message(SPARKY_LOG_LEVEL_ERROR, false, __VA_ARGS__)
 #else
 #define SP_ERROR(...)
 #define _SP_ERROR(...)
 #endif
 
 #if SPARKY_LOG_LEVEL >= SPARKY_LOG_LEVEL_WARN
-#define SP_WARN(...) sp::internal::log_message(SPARKY_LOG_LEVEL_WARN, true, "SPARKY:    ", __VA_ARGS__)
-#define _SP_WARN(...) sp::internal::log_message(SPARKY_LOG_LEVEL_WARN, false, __VA_ARGS__)
+#define SP_WARN(...) ge::internal::log_message(SPARKY_LOG_LEVEL_WARN, true, "SPARKY:    ", __VA_ARGS__)
+#define _SP_WARN(...) ge::internal::log_message(SPARKY_LOG_LEVEL_WARN, false, __VA_ARGS__)
 #else
 #define SP_WARN(...)
 #define _SP_WARN(...)
 #endif
 
 #if SPARKY_LOG_LEVEL >= SPARKY_LOG_LEVEL_INFO
-#define SP_INFO(...) sp::internal::log_message(SPARKY_LOG_LEVEL_INFO, true, "SPARKY:    ", __VA_ARGS__)
-#define _SP_INFO(...) sp::internal::log_message(SPARKY_LOG_LEVEL_INFO, false, __VA_ARGS__)
+#define SP_INFO(...) ge::internal::log_message(SPARKY_LOG_LEVEL_INFO, true, "SPARKY:    ", __VA_ARGS__)
+#define _SP_INFO(...) ge::internal::log_message(SPARKY_LOG_LEVEL_INFO, false, __VA_ARGS__)
 #else
 #define SP_INFO(...)
 #define _SP_INFO(...)

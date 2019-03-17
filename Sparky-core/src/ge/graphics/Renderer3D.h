@@ -6,7 +6,7 @@
 
 #include "LightSetup.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	typedef std::vector<RenderCommand> CommandQueue;
 	typedef std::vector<RendererUniform> SystemUniformList;

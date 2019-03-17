@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "Input.h"
 
-namespace sp {
+namespace ge {
 
 	InputManager* Input::s_InputManager = nullptr;
 

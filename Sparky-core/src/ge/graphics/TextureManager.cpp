@@ -3,7 +3,7 @@
 
 #include "TextureManager.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	std::vector<API::Texture*> TextureManager::m_Textures;
 

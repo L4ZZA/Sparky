@@ -5,7 +5,7 @@
 #include "ge/app/Window.h"
 #include "ge/app/Application.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Layer2D::Layer2D(const maths::mat4& projectionMatrix)
 	{

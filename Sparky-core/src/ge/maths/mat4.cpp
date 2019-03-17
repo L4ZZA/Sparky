@@ -5,7 +5,7 @@
 
 #include "Quaternion.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	mat4::mat4()
 	{

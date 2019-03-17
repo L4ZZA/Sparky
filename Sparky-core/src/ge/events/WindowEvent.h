@@ -3,7 +3,7 @@
 #include "Event.h"
 #include "ge/maths/tvec2.h"
 
-namespace sp { namespace events {
+namespace ge { namespace events {
 
 	class SP_API ResizeWindowEvent : public Event
 	{

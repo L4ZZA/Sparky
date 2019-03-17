@@ -4,7 +4,7 @@
 #include "ge/events/Events.h"
 #include "ge/utils/Log.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Layer::Layer()
 		: m_Window(Window::GetWindowClass(nullptr)), m_Visible(true)

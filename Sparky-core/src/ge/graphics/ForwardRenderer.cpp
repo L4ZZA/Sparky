@@ -4,7 +4,7 @@
 #include "ge/app/Application.h"
 #include "ge/graphics/Renderer.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	using namespace maths;
 

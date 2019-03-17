@@ -1,6 +1,6 @@
 #include "SponzaTest.h"
 
-using namespace sp;
+using namespace ge;
 using namespace debug;
 using namespace graphics;
 using namespace maths;
@@ -101,7 +101,7 @@ void SponzaTest::OnUpdate(const Timestep& ts)
 	m_SkyboxMaterial->SetUniform("invViewProjMatrix", mat4::Invert(vp));
 }
 
-void SponzaTest::OnEvent(sp::events::Event& event)
+void SponzaTest::OnEvent(ge::events::Event& event)
 {
 	if (event.GetType() == Event::Type::KEY_PRESSED)
 	{

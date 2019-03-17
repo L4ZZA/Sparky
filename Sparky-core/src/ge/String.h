@@ -5,7 +5,7 @@
 
 typedef std::string String;
 
-namespace sp {
+namespace ge {
 
 #define STRINGFORMAT_BUFFER_SIZE 10 * 1024
 

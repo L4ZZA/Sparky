@@ -4,7 +4,7 @@
 #include <GL/glew.h>
 #include "ge/utils/Log.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	GLTextureDepth::GLTextureDepth(uint width, uint height)
 		: m_Width(width), m_Height(height)

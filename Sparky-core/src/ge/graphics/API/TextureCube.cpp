@@ -7,7 +7,7 @@
 
 #include "ge/graphics/API/Context.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	TextureCube* TextureCube::CreateFromFile(const String& filepath)
 	{

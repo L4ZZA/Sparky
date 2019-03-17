@@ -6,7 +6,7 @@
 #include "API/Context.h"
 #include "ge/system/Memory.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Renderer* Renderer::s_Instance = nullptr;
 

@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "PostEffects.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	PostEffects::PostEffects()
 	{

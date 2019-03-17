@@ -3,7 +3,7 @@
 
 #include "ge/graphics/shaders/ShaderFactory.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 #if 0
 	DeferredRenderer::DeferredRenderer(uint width, uint height)

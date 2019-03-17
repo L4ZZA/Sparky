@@ -3,7 +3,7 @@
 #include "ge/Common.h"
 #include "ge/Types.h"
 
-namespace sp {
+namespace ge {
 
 	// TODO: Allocation Metrics
 	class SP_API Allocator

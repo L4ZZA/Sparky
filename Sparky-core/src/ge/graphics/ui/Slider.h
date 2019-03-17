@@ -5,7 +5,7 @@
 
 #include "Widget.h"
 
-namespace sp { namespace graphics { namespace ui {
+namespace ge { namespace graphics { namespace ui {
 
 	class SP_API Slider : public Widget
 	{

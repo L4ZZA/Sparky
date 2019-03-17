@@ -4,11 +4,11 @@
 #include "ge/Types.h"
 #include "ge/String.h"
 
-namespace sp { namespace entity {
+namespace ge { namespace entity {
 	class Entity;
 } }
 
-namespace sp { namespace entity { namespace component {
+namespace ge { namespace entity { namespace component {
 
 	struct SP_API ComponentType
 	{

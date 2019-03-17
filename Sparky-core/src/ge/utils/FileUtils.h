@@ -5,7 +5,7 @@
 
 #include <ge/utils/Log.h>
 
-namespace sp { namespace utils {
+namespace ge { namespace utils {
 
 	// String ReadFile(const String& filepath);
 

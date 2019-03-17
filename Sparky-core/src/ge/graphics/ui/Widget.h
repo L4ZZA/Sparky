@@ -5,7 +5,7 @@
 
 #include "ge/maths/maths.h"
 
-namespace sp { namespace graphics { namespace ui {
+namespace ge { namespace graphics { namespace ui {
 
 	class SP_API Widget
 	{

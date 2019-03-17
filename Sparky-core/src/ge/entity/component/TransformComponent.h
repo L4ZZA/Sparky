@@ -5,7 +5,7 @@
 #include "ge/Common.h"
 #include <ge/maths/maths.h>
 
-namespace sp { namespace entity { namespace component {
+namespace ge { namespace entity { namespace component {
 
 	class SP_API TransformComponent : public Component
 	{

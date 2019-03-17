@@ -11,7 +11,7 @@ namespace ftgl {
 	struct texture_font_t;
 }
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API Font
 	{

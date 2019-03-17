@@ -4,7 +4,7 @@
 #include "ge/utils/Log.h"
 #include <freetype-gl/freetype-gl.h>
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Font::Font(const String& name, const String& filename, float size)
 		: m_Name(name), m_Filename(filename), m_Size(size), m_Scale(maths::vec2(1.0f, 1.0f)), m_Texture(nullptr)

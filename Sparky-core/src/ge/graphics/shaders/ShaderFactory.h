@@ -3,7 +3,7 @@
 #include "ge/Common.h"
 #include "Shader.h"
 
-namespace sp { namespace graphics { namespace ShaderFactory {
+namespace ge { namespace graphics { namespace ShaderFactory {
 
 	SP_API API::Shader* BatchRendererShader();
 	SP_API API::Shader* SimpleShader();

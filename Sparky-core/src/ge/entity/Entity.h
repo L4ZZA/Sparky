@@ -5,7 +5,7 @@
 
 #include "component/Components.h"
 
-namespace sp { namespace entity {
+namespace ge { namespace entity {
 
 	class SP_API Entity
 	{

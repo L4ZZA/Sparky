@@ -4,7 +4,7 @@
 #include "../maths/maths.h"
 #include "API/Texture2D.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	struct SP_API Mask
 	{

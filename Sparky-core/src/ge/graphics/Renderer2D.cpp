@@ -14,7 +14,7 @@
 
 #include <freetype-gl/freetype-gl.h>
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 #define RENDERER_MAX_SPRITES	60000
 #define RENDERER_SPRITE_SIZE	RENDERER_VERTEX_SIZE * 4

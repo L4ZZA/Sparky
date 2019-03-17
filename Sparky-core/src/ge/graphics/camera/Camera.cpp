@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "Camera.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Camera::Camera(const maths::mat4& projectionMatrix)
 		: m_ProjectionMatrix(projectionMatrix)

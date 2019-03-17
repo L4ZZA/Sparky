@@ -5,7 +5,7 @@
 
 #include "vec3.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	struct mat4;
 

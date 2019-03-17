@@ -3,7 +3,7 @@
 
 #include "AABB.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	Rectangle::Rectangle()
 		: position(vec2()), size(vec2())

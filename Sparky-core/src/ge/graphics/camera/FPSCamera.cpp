@@ -7,7 +7,7 @@
 #include "ge/app/Application.h"
 #include "ge/debug/DebugMenu.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	using namespace maths;
 

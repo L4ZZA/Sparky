@@ -18,7 +18,7 @@ extern "C" void SoundManagerSetGain(const char* name, double gain);
 	struct ga_Mixer;
 #endif
 
-namespace sp { namespace audio {
+namespace ge { namespace audio {
 
 	class SP_API SoundManager
 	{

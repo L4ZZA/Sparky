@@ -8,7 +8,7 @@
 #include "ge/platform/opengl/GLShader.h"
 #include "ge/system/Memory.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	GLTexture2D::GLTexture2D(uint width, uint height, TextureParameters parameters, TextureLoadOptions loadOptions)
 		: m_FileName("NULL")

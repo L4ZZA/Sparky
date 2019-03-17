@@ -7,7 +7,7 @@
 
 #include "ge/graphics/API/Context.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	Texture2D* Texture2D::Create(uint width, uint height, TextureParameters parameters, TextureLoadOptions loadOptions)
 	{

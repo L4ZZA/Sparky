@@ -3,7 +3,7 @@
 #include "ge/Common.h"
 #include "ge/maths/maths.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API Camera
 	{

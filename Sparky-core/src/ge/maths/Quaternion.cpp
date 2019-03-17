@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "Quaternion.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 #define _VECTORMATH_SLERP_TOL 0.999f
 

@@ -5,7 +5,7 @@
 
 #include <GL/glew.h>
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	GLRenderer::GLRenderer()
 	{

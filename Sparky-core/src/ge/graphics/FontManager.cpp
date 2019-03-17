@@ -3,7 +3,7 @@
 
 #include "ge/embedded/Embedded.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	std::vector<Font*> FontManager::s_Fonts; 
 	maths::vec2 FontManager::s_Scale = maths::vec2(1, 1);

@@ -1,6 +1,6 @@
 #include "Test3D.h"
 
-using namespace sp;
+using namespace ge;
 using namespace graphics;
 using namespace maths;
 

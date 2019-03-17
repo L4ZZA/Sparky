@@ -6,7 +6,7 @@
 #include "ge/utils/Log.h"
 #include "MemoryManager.h"
 
-namespace sp {
+namespace ge {
 
 	#define SP_MEMORY_ALIGNMENT 16
 	#define SP_ALLOC(size)	_aligned_malloc(size, SP_MEMORY_ALIGNMENT)
@@ -16,9 +16,9 @@ namespace sp {
 	{
 		SP_ASSERT(size < 1024 * 1024 * 1024);
 
-		sp::internal::MemoryManager::Get()->m_MemoryStats.totalAllocated += size;
-		sp::internal::MemoryManager::Get()->m_MemoryStats.currentUsed += size;
-		sp::internal::MemoryManager::Get()->m_MemoryStats.totalAllocations++;
+		ge::internal::MemoryManager::Get()->m_MemoryStats.totalAllocated += size;
+		ge::internal::MemoryManager::Get()->m_MemoryStats.currentUsed += size;
+		ge::internal::MemoryManager::Get()->m_MemoryStats.totalAllocations++;
 
 		size_t actualSize = size + sizeof(size_t);
 		byte* result = (byte*)SP_ALLOC(actualSize);
@@ -42,8 +42,8 @@ namespace sp {
 	{
 		byte* memory = ((byte*)block) - sizeof(size_t);
 		size_t size = *(size_t*)memory;
-		sp::internal::MemoryManager::Get()->m_MemoryStats.totalFreed += size;
-		sp::internal::MemoryManager::Get()->m_MemoryStats.currentUsed -= size;
+		ge::internal::MemoryManager::Get()->m_MemoryStats.totalFreed += size;
+		ge::internal::MemoryManager::Get()->m_MemoryStats.currentUsed -= size;
 		SP_FREE(memory);
 	}
 

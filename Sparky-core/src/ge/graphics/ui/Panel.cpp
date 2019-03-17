@@ -7,7 +7,7 @@
 #include "ge/maths/maths.h"
 #include "ge/graphics/shaders/ShaderFactory.h"
 
-namespace sp { namespace graphics { namespace ui {
+namespace ge { namespace graphics { namespace ui {
 
 	using namespace events;
 	using namespace maths;

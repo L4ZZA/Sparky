@@ -4,7 +4,7 @@
 #include "ge/maths/maths.h"
 #include "ge/events/Event.h"
 
-namespace sp {
+namespace ge {
 
 #define MAX_KEYS	1024
 #define MAX_BUTTONS	32

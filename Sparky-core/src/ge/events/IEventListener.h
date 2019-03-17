@@ -2,7 +2,7 @@
 
 #include "Event.h"
 
-namespace sp { namespace events {
+namespace ge { namespace events {
 
 	class SP_API IEventListener
 	{

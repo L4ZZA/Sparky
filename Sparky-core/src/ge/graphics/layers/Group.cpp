@@ -3,7 +3,7 @@
 
 #include "ge/graphics/Renderer2D.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Group::Group(const maths::mat4& transform)
 		: m_TransformationMatrix(transform)

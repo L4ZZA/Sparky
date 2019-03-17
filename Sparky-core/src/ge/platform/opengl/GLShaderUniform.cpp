@@ -3,7 +3,7 @@
 
 #include "ge/graphics/shaders/Shader.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	GLShaderUniformDeclaration::GLShaderUniformDeclaration(Type type, const String& name, uint count)
 		: m_Type(type), m_Struct(nullptr)

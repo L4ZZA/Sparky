@@ -7,7 +7,7 @@
 #include "vec4.h"
 #include "maths_func.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	struct Quaternion;
 

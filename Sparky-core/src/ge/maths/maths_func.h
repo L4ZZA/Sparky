@@ -6,7 +6,7 @@
 
 #define SP_PI 3.14159265358f
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	SP_API inline float toRadians(float degrees)
 	{

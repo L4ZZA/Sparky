@@ -6,7 +6,7 @@
 #include <GL/glew.h>
 #include "ge/utils/Log.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	GLFramebufferDepth::GLFramebufferDepth(uint width, uint height)
 		: m_Width(width), m_Height(height)

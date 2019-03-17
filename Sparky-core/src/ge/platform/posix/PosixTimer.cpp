@@ -4,7 +4,7 @@
 
 #include <chrono>
 
-namespace sp {
+namespace ge {
 
 	typedef std::chrono::high_resolution_clock HighResolutionClock;
 	typedef std::chrono::duration<float, std::milli> milliseconds_type;

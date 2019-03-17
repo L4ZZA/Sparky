@@ -2,7 +2,7 @@
 
 #include "ge/graphics/API/Framebuffer.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API GBuffer
 	{

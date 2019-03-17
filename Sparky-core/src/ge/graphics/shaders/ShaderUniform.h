@@ -5,7 +5,7 @@
 #include "ge/String.h"
 #include "ge/utils/Log.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	class SP_API ShaderUniformDeclaration
 	{

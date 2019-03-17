@@ -9,42 +9,42 @@
 
 inline void* operator new(size_t size)
 {
-	return sp::Allocator::Allocate(size);
+	return ge::Allocator::Allocate(size);
 }
 
 inline void* operator new(size_t size, const char* file, uint line)
 {
-	return sp::Allocator::AllocateDebug(size, file, line);
+	return ge::Allocator::AllocateDebug(size, file, line);
 }
 
 inline void* operator new[](size_t size)
 {
-	return sp::Allocator::Allocate(size);
+	return ge::Allocator::Allocate(size);
 }
 
 inline void* operator new[](size_t size, const char* file, uint line)
 {
-	return sp::Allocator::AllocateDebug(size, file, line);
+	return ge::Allocator::AllocateDebug(size, file, line);
 }
 
 inline void operator delete(void* block)
 {
-	sp::Allocator::Free(block);
+	ge::Allocator::Free(block);
 }
 
 inline void operator delete(void* block, const char* file, uint line)
 {
-	sp::Allocator::FreeDebug(block, file, line);
+	ge::Allocator::FreeDebug(block, file, line);
 }
 
 inline void operator delete[](void* block)
 {
-	sp::Allocator::Free(block);
+	ge::Allocator::Free(block);
 }
 
 inline void operator delete[](void* block, const char* file, uint line)
 {
-	sp::Allocator::FreeDebug(block, file, line);
+	ge::Allocator::FreeDebug(block, file, line);
 }
 
 #pragma warning(default : 4595)

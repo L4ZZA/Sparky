@@ -4,7 +4,7 @@
 #include "app/Application.h"
 #include "ge/debug/DebugRenderer.h"
 
-namespace sp {
+namespace ge {
 
 	using namespace graphics;
 	using namespace maths;

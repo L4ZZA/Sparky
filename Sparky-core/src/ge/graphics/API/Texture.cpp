@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "Texture.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	TextureWrap Texture::s_WrapMode = TextureWrap::CLAMP;
 	TextureFilter Texture::s_FilterMode = TextureFilter::LINEAR;

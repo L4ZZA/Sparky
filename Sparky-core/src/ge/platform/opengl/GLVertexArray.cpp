@@ -4,7 +4,7 @@
 #include <GL/glew.h>
 #include "ge/utils/Log.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	GLVertexArray::GLVertexArray()
 	{

@@ -5,7 +5,7 @@
 #include "ge/Common.h"
 #include "ge/graphics/Sprite.h"
 
-namespace sp { namespace entity { namespace component {
+namespace ge { namespace entity { namespace component {
 
 	class SP_API SpriteComponent : public Component
 	{

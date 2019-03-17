@@ -4,7 +4,7 @@
 #include "ge/graphics/API/Framebuffer.h"
 #include "../Material.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API PostEffectsPass
 	{

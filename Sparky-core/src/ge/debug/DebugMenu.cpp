@@ -8,7 +8,7 @@
 
 #include "ge/system/Memory.h"
 
-namespace sp { namespace debug {
+namespace ge { namespace debug {
 
 	using namespace maths;
 	using namespace graphics;

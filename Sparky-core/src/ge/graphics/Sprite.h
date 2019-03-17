@@ -2,7 +2,7 @@
 
 #include "Renderable2D.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API Sprite : public Renderable2D
 	{

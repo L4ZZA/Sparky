@@ -8,7 +8,7 @@
 
 #include <GL/glew.h>
 
-namespace sp { namespace graphics { namespace MeshFactory {
+namespace ge { namespace graphics { namespace MeshFactory {
 
 	Mesh* CreateQuad(float x, float y, float width, float height, MaterialInstance* material)
 	{

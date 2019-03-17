@@ -3,7 +3,7 @@
 #include "ge/graphics/API/Texture2D.h"
 #include "GLCommon.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	class GLTexture2D : public Texture2D
 	{

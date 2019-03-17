@@ -2,7 +2,7 @@
 
 #include <ge/Types.h>
 
-namespace sp { namespace internal {
+namespace ge { namespace internal {
 
 	extern byte* DEFAULT_FONT;
 	extern uint DEFAULT_FONT_SIZE;

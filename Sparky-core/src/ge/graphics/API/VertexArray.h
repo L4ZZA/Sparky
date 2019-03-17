@@ -6,7 +6,7 @@
 
 #include "VertexBuffer.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	class SP_API VertexArray
 	{

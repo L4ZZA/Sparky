@@ -3,7 +3,7 @@
 #include "ge/Common.h"
 #include "ge/String.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	enum SP_API RendererBufferType
 	{

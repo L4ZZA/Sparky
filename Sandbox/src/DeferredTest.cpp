@@ -1,6 +1,6 @@
 #include "DeferredTest.h"
 
-using namespace sp;
+using namespace ge;
 using namespace debug;
 using namespace graphics;
 using namespace maths;
@@ -101,7 +101,7 @@ void DeferredTest::OnRender(Renderer3D& renderer)
 	Layer3D::OnRender(renderer);
 }
 
-void DeferredTest::OnEvent(sp::events::Event& event)
+void DeferredTest::OnEvent(ge::events::Event& event)
 {
 }
 

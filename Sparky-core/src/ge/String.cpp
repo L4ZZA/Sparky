@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "String.h"
 
-namespace sp {
+namespace ge {
 
 	char* StringFormat::s_Buffer = new char[STRINGFORMAT_BUFFER_SIZE];
 

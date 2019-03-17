@@ -7,7 +7,7 @@
 
 #include "ge/debug/DebugRenderer.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Mesh::Mesh(API::VertexArray* vertexArray, API::IndexBuffer* indexBuffer, MaterialInstance* materialInstance)
 		: m_VertexArray(vertexArray), m_IndexBuffer(indexBuffer), m_MaterialInstance(materialInstance)

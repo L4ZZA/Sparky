@@ -3,7 +3,7 @@
 #include "ge/sp.h"
 #include "ge/String.h"
 
-namespace sp {
+namespace ge {
 	
 	class SP_API VFS
 	{

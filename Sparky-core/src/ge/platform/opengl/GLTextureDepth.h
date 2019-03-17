@@ -3,7 +3,7 @@
 #include "ge/graphics/API/TextureDepth.h"
 #include "GLCommon.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	class GLTextureDepth : public TextureDepth
 	{

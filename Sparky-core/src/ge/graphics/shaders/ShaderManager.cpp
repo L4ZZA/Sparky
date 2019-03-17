@@ -3,7 +3,7 @@
 
 #include "ge/system/Memory.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	std::vector<API::Shader*> ShaderManager::s_Shaders;
 

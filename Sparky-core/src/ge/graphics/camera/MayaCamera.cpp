@@ -6,7 +6,7 @@
 
 #include "ge/utils/Log.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	using namespace maths;
 

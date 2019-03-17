@@ -4,7 +4,7 @@
 #include "GLTextureDepth.h"
 #include "GLCommon.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class GLFramebufferDepth : public FramebufferDepth
 	{

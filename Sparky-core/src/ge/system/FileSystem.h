@@ -4,7 +4,7 @@
 #include "ge/Types.h"
 #include "ge/String.h"
 
-namespace sp {
+namespace ge {
 
 	// TODO: Multiple filesystems (eg. binary blob) should be supported
 	class FileSystem

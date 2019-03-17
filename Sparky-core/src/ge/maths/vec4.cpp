@@ -3,7 +3,7 @@
 
 #include "mat4.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	vec4::vec4(float scalar)
 		: x(scalar), y(scalar), z(scalar), w(scalar)

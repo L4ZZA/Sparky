@@ -9,7 +9,7 @@
 
 #include "ge/platform/opengl/GLTypes.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	struct SP_API BufferElement
 	{

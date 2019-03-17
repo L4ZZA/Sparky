@@ -8,7 +8,7 @@
 
 #include <GL/glew.h>
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	static HDC hDc;
 

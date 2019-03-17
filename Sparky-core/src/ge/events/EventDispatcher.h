@@ -3,7 +3,7 @@
 #include "Events.h"
 #include <functional>
 
-namespace sp { namespace events {
+namespace ge { namespace events {
 
 	class EventDispatcher
 	{

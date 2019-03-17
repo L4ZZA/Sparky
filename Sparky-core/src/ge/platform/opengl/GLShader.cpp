@@ -4,7 +4,7 @@
 #include <GL/glew.h>
 #include "ge/system/Memory.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	enum class ShaderType
 	{

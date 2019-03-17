@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "Entity.h"
 
-namespace sp { namespace entity {
+namespace ge { namespace entity {
 
 	using namespace component;
 

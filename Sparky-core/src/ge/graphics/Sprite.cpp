@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "Sprite.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Sprite::Sprite()
 		: Renderable2D()

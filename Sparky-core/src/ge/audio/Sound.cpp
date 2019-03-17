@@ -9,7 +9,7 @@
 	#include <gau.h>
 #endif
 
-namespace sp { namespace audio {
+namespace ge { namespace audio {
 
 	Sound::Sound(const String& name, const String& filename)
 		: m_Name(name), m_Filename(filename), m_Playing(false), m_Count(0)

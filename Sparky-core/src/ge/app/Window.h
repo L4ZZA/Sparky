@@ -12,7 +12,7 @@
 
 #include "ge/app/Input.h"
 
-namespace sp {
+namespace ge {
 
 	typedef std::function<void(events::Event& event)> WindowEventCallback;
 

@@ -4,7 +4,7 @@
 #include "GLTexture2D.h"
 #include "GLCommon.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class GLFramebuffer2D : public Framebuffer2D
 	{

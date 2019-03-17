@@ -13,7 +13,7 @@
 
 #include "ge/graphics/API/Context.h"
 
-namespace sp {
+namespace ge {
 
 	namespace debug {
 		class DebugLayer;

@@ -6,7 +6,7 @@
 
 #include "ge/utils/Log.h"
 
-namespace sp { namespace internal {
+namespace ge { namespace internal {
 
 	SystemInfo System::s_SystemInfo;
 

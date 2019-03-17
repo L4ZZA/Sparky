@@ -7,7 +7,7 @@
 #include "ge/graphics/shaders/ShaderManager.h"
 #include "ge/system/VFS.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	using namespace maths;
 

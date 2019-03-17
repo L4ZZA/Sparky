@@ -8,7 +8,7 @@
 #include "DebugMenuSlider.h"
 #include "ge/graphics/ui/Slider.h"
 
-namespace sp { namespace debug {
+namespace ge { namespace debug {
 
 	struct IAction;
 	struct PathAction;

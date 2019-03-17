@@ -4,7 +4,7 @@
 #include "ge/utils/Log.h"
 #include "Memory.h"
 
-namespace sp { namespace internal {
+namespace ge { namespace internal {
 
 	MemoryManager* MemoryManager::s_Instance = nullptr;
 

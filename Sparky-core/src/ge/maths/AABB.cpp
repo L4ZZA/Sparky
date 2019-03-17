@@ -3,7 +3,7 @@
 
 #include "Rectangle.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	AABB::AABB()
 		: min(vec3()), max(vec3())

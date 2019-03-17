@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "Embedded.h"
 
-namespace sp { namespace internal {
+namespace ge { namespace internal {
 
 	byte DEFAULT_FONT_ARRAY[] =
 	{

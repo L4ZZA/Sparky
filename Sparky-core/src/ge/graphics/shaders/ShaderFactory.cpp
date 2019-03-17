@@ -3,7 +3,7 @@
 
 #include "ge/graphics/API/Context.h"
 
-namespace sp { namespace graphics { namespace ShaderFactory {
+namespace ge { namespace graphics { namespace ShaderFactory {
 
 #if defined(SP_PLATFORM_WINDOWS)
 

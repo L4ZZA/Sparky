@@ -3,7 +3,7 @@
 
 #include <Windows.h>
 
-namespace sp { namespace internal {
+namespace ge { namespace internal {
 
 	SystemMemoryInfo MemoryManager::GetSystemInfo()
 	{

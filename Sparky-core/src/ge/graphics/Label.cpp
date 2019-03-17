@@ -3,7 +3,7 @@
 
 #include "Renderer2D.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Label::Label(const String& text, float x, float y, uint color, Alignment alignment)
 		: Sprite(), m_Font(FontManager::Get("SourceSansPro"))

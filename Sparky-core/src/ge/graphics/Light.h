@@ -3,7 +3,7 @@
 #include "ge/Types.h"
 #include "ge/maths/maths.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	__declspec(align(16)) struct SP_API Light
 	{

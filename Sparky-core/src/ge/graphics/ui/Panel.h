@@ -4,7 +4,7 @@
 #include "ge/graphics/Renderer2D.h"
 #include "ge/graphics/layers/Layer2D.h"
 
-namespace sp { namespace graphics { namespace ui {
+namespace ge { namespace graphics { namespace ui {
 
 	class Widget;
 

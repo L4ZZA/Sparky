@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sp { namespace debug {
+namespace ge { namespace debug {
 
 	class DebugMenuSlider
 	{

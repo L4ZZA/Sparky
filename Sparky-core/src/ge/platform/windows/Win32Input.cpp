@@ -8,7 +8,7 @@
 #include "ge/app/Window.h"
 #include "ge/events/Events.h"
 
-namespace sp {
+namespace ge {
 
 	using namespace events;
 

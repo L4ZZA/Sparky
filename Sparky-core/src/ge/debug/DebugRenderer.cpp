@@ -4,7 +4,7 @@
 #include "ge/graphics/shaders/ShaderFactory.h"
 
 #ifdef SP_DEBUG
-namespace sp { namespace debug {
+namespace ge { namespace debug {
 
 #define RENDERER_VERTEX_SIZE	sizeof(LineVertex)
 #define RENDERER_MAX_LINES		65536

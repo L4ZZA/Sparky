@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "LightSetup.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	LightSetup::LightSetup()
 	{

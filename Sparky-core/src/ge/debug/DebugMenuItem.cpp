@@ -6,7 +6,7 @@
 
 #include "DebugMenu.h"
 
-namespace sp { namespace debug {
+namespace ge { namespace debug {
 
 	using namespace graphics;
 

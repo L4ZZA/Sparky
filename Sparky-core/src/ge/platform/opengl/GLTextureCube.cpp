@@ -10,7 +10,7 @@
 
 #include "GLTexture2D.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	GLTextureCube::GLTextureCube(const String& name, const String& filepath)
 	{

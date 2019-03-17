@@ -4,7 +4,7 @@
 
 #include "GLCommon.h"
 
-namespace sp {
+namespace ge {
 
 	GLenum GLCheckError()
 	{

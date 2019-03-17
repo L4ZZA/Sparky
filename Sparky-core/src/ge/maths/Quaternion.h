@@ -4,7 +4,7 @@
 
 #include "mat4.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	struct SP_API Quaternion
 	{

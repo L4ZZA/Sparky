@@ -8,7 +8,7 @@
 #include "ge/graphics/Renderable2D.h"
 #include "ge/graphics/Mask.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API Layer2D : public Layer
 	{

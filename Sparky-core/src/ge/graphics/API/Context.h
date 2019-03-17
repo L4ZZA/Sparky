@@ -3,7 +3,7 @@
 #include "ge/Common.h"
 #include "ge/app/Window.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	enum class SP_API RenderAPI
 	{

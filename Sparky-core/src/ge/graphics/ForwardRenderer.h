@@ -4,7 +4,7 @@
 #include "Renderer3D.h"
 #include"shaders/Shader.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API ForwardRenderer : public Renderer3D
 	{

@@ -14,7 +14,7 @@
 #include "API/VertexArray.h"
 #include "API/IndexBuffer.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	enum class SP_API RenderTarget
 	{

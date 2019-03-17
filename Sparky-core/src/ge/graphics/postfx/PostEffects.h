@@ -8,7 +8,7 @@
 #include "ge/graphics/API/IndexBuffer.h"
 #include "PostEffectsPass.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	// The Post Effects pipeline
 	class SP_API PostEffects

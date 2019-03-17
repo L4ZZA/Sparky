@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "Slider.h"
 
-namespace sp { namespace graphics { namespace ui {
+namespace ge { namespace graphics { namespace ui {
 
 	using namespace maths;
 

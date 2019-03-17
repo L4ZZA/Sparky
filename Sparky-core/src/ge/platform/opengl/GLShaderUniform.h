@@ -4,7 +4,7 @@
 #include "ge/graphics/shaders/ShaderUniform.h"
 #include "GLCommon.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	class GLShaderUniformDeclaration : public ShaderUniformDeclaration
 	{

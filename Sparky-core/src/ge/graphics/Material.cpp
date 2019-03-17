@@ -8,7 +8,7 @@
 
 #include <sstream>
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	using namespace API;
 

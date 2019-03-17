@@ -2,7 +2,7 @@
 
 #include "GBuffer.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 #if 0
 	GBuffer::GBuffer(uint width, uint height)

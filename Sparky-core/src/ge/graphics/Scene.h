@@ -8,7 +8,7 @@
 #include "camera/Camera.h"
 #include "LightSetup.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class Renderer3D;
 

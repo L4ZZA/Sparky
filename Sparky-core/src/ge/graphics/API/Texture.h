@@ -3,7 +3,7 @@
 #include "ge/Types.h"
 #include "ge/String.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	enum class SP_API TextureWrap
 	{

@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "GLShaderResource.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	GLShaderResourceDeclaration::GLShaderResourceDeclaration(Type type, const String& name, uint count)
 		: m_Type(type), m_Name(name), m_Count(count)

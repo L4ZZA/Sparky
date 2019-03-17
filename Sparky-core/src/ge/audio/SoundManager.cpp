@@ -11,7 +11,7 @@
 
 #include "ge/system/Memory.h"
 
-namespace sp { namespace audio {
+namespace ge { namespace audio {
 
 #ifndef SPARKY_PLATFORM_WEB
 	gau_Manager* SoundManager::m_Manager = nullptr;

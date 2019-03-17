@@ -2,7 +2,7 @@
 
 #include "MemoryManager.h"
 
-namespace sp { namespace internal {
+namespace ge { namespace internal {
 
 	struct SystemInfo
 	{

@@ -2,7 +2,7 @@
 
 #include "ge/String.h"
 
-namespace sp {
+namespace ge {
 	namespace internal {
 
 		struct SP_API SystemMemoryInfo

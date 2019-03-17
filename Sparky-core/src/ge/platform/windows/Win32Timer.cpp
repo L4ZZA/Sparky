@@ -3,7 +3,7 @@
 
 #include <Windows.h>
 
-namespace sp {
+namespace ge {
 
 	struct Members
 	{

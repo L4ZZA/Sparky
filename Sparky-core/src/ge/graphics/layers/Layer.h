@@ -9,7 +9,7 @@
 #include "ge/app/Window.h"
 #include "ge/utils/Timestep.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API Layer : public events::IEventListener
 	{

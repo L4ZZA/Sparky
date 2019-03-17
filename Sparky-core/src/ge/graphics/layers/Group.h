@@ -3,7 +3,7 @@
 #include "../Renderable2D.h"
 #include "ge/Common.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API Group : public Renderable2D
 	{

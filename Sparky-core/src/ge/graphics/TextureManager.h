@@ -4,7 +4,7 @@
 #include "ge/Types.h"
 #include "ge/graphics/API/Texture.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API TextureManager
 	{

@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "BufferLayout.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	BufferLayout::BufferLayout()
 		: m_Size(0)

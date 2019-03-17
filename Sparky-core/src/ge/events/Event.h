@@ -3,7 +3,7 @@
 #include "ge/Common.h"
 #include "ge/String.h"
 
-namespace sp { namespace events {
+namespace ge { namespace events {
 
 #undef MOUSE_PRESSED
 #undef MOUSE_RELEASED

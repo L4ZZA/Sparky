@@ -16,7 +16,7 @@
 
 EXTERN_C IMAGE_DOS_HEADER __ImageBase;
 
-namespace sp {
+namespace ge {
 
 	using namespace events;
 	using namespace graphics;

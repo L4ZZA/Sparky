@@ -3,7 +3,7 @@
 #include "Event.h"
 #include "../maths/vec2.h"
 
-namespace sp { namespace events {
+namespace ge { namespace events {
 
 	class SP_API MouseButtonEvent : public Event
 	{

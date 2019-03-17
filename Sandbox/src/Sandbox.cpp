@@ -5,7 +5,7 @@
 #include "DeferredTest.h"
 #include "SponzaTest.h"
 
-using namespace sp;
+using namespace ge;
 using namespace graphics;
 using namespace maths;
 
@@ -13,7 +13,7 @@ class Game : public Application
 {
 public:
 	Game()
-		: Application("Sandbox", { 1280, 720, false, false }, sp::graphics::API::RenderAPI::DIRECT3D)
+		: Application("Sandbox", { 1280, 720, false, false }, ge::graphics::API::RenderAPI::OPENGL)
 	{
 	}
 
@@ -28,8 +28,8 @@ public:
 		VFS::Get()->Mount("pbr", "res/pbr");
 		VFS::Get()->Mount("shaders", "shaders");
 
-		PushLayer(spnew Test2D());
-		// PushLayer(spnew Test3D());
+		//PushLayer(spnew Test2D());
+		 PushLayer(spnew Test3D());
 		// PushLayer(spnew SponzaTest());
 		// PushLayer(spnew DeferredTest()); // Doesn't work atm
 	}

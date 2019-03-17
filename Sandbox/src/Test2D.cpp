@@ -1,6 +1,6 @@
 #include "Test2D.h"
 
-using namespace sp;
+using namespace ge;
 using namespace graphics;
 using namespace events;
 using namespace entity;
@@ -53,7 +53,7 @@ void Test2D::OnInit(Renderer2D& renderer, Material& material)
 
 void Test2D::OnTick()
 {
-	using namespace sp::internal;
+	using namespace ge::internal;
 
 	Application& app = Application::GetApplication();
 	SP_INFO(app.GetUPS(), " ups, ", app.GetFPS(), " fps");
@@ -97,7 +97,7 @@ bool Test2D::OnMousePressedEvent(MousePressedEvent& event)
 	return false;
 }
 
-void Test2D::OnEvent(sp::events::Event& event)
+void Test2D::OnEvent(ge::events::Event& event)
 {
 	EventDispatcher dispatcher(event);
 	dispatcher.Dispatch<KeyPressedEvent>(METHOD(&Test2D::OnKeyPressedEvent));

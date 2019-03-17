@@ -4,7 +4,7 @@
 #include "GLContext.h"
 #include "GLCommon.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class GLRenderer : public Renderer
 	{

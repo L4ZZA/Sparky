@@ -4,7 +4,7 @@
 
 #include "ge/graphics/FontManager.h"
 
-namespace sp { namespace graphics { namespace ui {
+namespace ge { namespace graphics { namespace ui {
 
 	using namespace maths;
 

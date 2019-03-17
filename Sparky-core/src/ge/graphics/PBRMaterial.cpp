@@ -4,7 +4,7 @@
 #include "ge/system/Memory.h"
 #include "ge/graphics/shaders/ShaderResource.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	using namespace API;
 

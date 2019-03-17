@@ -5,7 +5,7 @@
 
 #include "ge/Types.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	struct vec2;
 	struct vec4;

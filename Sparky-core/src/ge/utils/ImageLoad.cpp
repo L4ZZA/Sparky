@@ -7,7 +7,7 @@
 #include "ge/system/Memory.h"
 #include "ge/system/VFS.h"
 
-namespace sp {
+namespace ge {
 
 	byte* LoadImage(const char* filename, uint* width, uint* height, uint* bits, bool flipY)
 	{

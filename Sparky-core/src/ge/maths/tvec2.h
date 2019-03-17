@@ -3,7 +3,7 @@
 #include "ge/sp.h"
 #include "ge/Common.h"
 
-namespace sp { namespace maths {
+namespace ge { namespace maths {
 
 	template <class T>
 	struct tvec2

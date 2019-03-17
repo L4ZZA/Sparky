@@ -8,7 +8,7 @@
 #include "ge/embedded/Embedded.h"
 #include <FreeImage.h>
 
-namespace sp {
+namespace ge {
 
     using namespace graphics;
 

@@ -7,7 +7,7 @@
 
 #include "ge/system/Memory.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	FramebufferDepth* FramebufferDepth::Create(uint width, uint height)
 	{

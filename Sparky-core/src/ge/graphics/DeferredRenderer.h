@@ -5,7 +5,7 @@
 
 #include "GBuffer.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class DeferredRenderer : public Renderer3D
 	{

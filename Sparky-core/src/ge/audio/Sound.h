@@ -10,7 +10,7 @@
 	struct ga_Handle;
 #endif
 
-namespace sp { namespace audio {
+namespace ge { namespace audio {
 
 	class SP_API Sound
 	{

@@ -5,7 +5,7 @@
 
 #include <Windows.h>
 
-namespace sp {
+namespace ge {
 
 	void CALLBACK FileIOCompletionRoutine(DWORD dwErrorCode, DWORD dwNumberOfBytesTransfered, LPOVERLAPPED lpOverlapped)
 	{

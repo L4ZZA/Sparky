@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include "ge/utils/Log.h"
 
-namespace sp { namespace internal {
+namespace ge { namespace internal {
 
 	void PlatformLogMessage(uint level, const char* message)
 	{

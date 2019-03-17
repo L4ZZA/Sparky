@@ -3,7 +3,7 @@
 #include "Event.h"
 
 
-namespace sp { namespace events {
+namespace ge { namespace events {
 
 	class SP_API KeyEvent : public Event
 	{

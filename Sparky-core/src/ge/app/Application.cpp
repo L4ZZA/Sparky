@@ -7,7 +7,7 @@
 #include "ge/system/System.h"
 #include "ge/system/Memory.h"
 
-namespace sp {
+namespace ge {
 
 	using namespace graphics;
 

@@ -5,7 +5,7 @@
 #include "graphics/Renderer2D.h"
 #include "entity/Entity.h"
 
-namespace sp {
+namespace ge {
  
 	class SP_API Scene2D
 	{

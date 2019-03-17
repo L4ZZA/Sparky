@@ -5,7 +5,7 @@
 #include "FileSystem.h"
 #include "ge/utils/Log.h"
 
-namespace sp {
+namespace ge {
 
 	VFS* VFS::s_Instance = nullptr;
 

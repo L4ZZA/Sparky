@@ -3,7 +3,7 @@
 
 #include "../DeferredRenderer.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	Layer3D::Layer3D(Scene* scene, Renderer3D* renderer)
 		: m_Scene(scene), m_Renderer(renderer)

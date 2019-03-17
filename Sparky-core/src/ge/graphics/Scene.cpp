@@ -8,7 +8,7 @@
 
 #include "ge/debug/DebugRenderer.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	using namespace entity;
 	using namespace component;

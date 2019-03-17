@@ -2,15 +2,15 @@
 
 #include <GL/glew.h>
 
-namespace sp {
+namespace ge {
 	extern GLenum GLCheckError();
 	extern bool GLLogCall(const char* function, const char* file, int32 line);
 }
 
 #ifdef SP_DEBUG
-	#define GLCall(x) sp::GLCheckError();\
+	#define GLCall(x) ge::GLCheckError();\
 		x; \
-		if (!sp::GLLogCall(#x, __FILE__, __LINE__)) __debugbreak();
+		if (!ge::GLLogCall(#x, __FILE__, __LINE__)) __debugbreak();
 #else
 	#define GLCall(x) x
 #endif

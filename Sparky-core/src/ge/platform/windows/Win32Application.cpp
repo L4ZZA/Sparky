@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "ge/app/Application.h"
 
-namespace sp {
+namespace ge {
 
 	Application::Application(const String& name, const WindowProperties& properties, graphics::API::RenderAPI api)
 		: m_Name(name), m_Properties(properties), m_Frametime(0.0f)

@@ -10,7 +10,7 @@
 #include "ShaderUniform.h"
 #include "ShaderResource.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 #define SHADER_VERTEX_INDEX		0
 #define SHADER_UV_INDEX			1

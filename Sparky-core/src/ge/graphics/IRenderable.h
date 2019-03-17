@@ -2,7 +2,7 @@
 
 #include "ge/Common.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class Renderer3D;
 

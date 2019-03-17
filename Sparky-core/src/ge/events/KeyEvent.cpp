@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "KeyEvent.h"
 
-namespace sp { namespace events {
+namespace ge { namespace events {
 
 	KeyEvent::KeyEvent(int32 keyCode, Event::Type type)
 		: Event(type), m_KeyCode(keyCode)

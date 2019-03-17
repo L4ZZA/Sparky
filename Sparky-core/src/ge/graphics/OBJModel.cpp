@@ -9,15 +9,15 @@
 #include <GL/glew.h>
 
 template<>
-struct std::hash<sp::graphics::Model::IndexSet>
+struct std::hash<ge::graphics::Model::IndexSet>
 {
-	const size_t operator()(const sp::graphics::Model::IndexSet& key) const
+	const size_t operator()(const ge::graphics::Model::IndexSet& key) const
 	{
 		return (key.position) ^ (key.normal << 14) ^ (key.uv << 23);
 	}
 };
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	using namespace maths;
 

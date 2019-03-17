@@ -8,7 +8,7 @@
 
 #include "Texture.h"
 
-namespace sp { namespace graphics {
+namespace ge { namespace graphics {
 
 	class SP_API Framebuffer
 	{

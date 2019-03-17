@@ -3,7 +3,7 @@
 #include "ge/graphics/API/VertexArray.h"
 #include "GLCommon.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	class GLVertexArray : public VertexArray
 	{

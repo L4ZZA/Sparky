@@ -5,7 +5,7 @@
 
 #include "ge/system/Memory.h"
 
-namespace sp { namespace graphics { namespace API {
+namespace ge { namespace graphics { namespace API {
 
 	Context* Context::s_Context = nullptr;
 	RenderAPI Context::s_RenderAPI = RenderAPI::NONE;

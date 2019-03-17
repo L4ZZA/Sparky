@@ -1,7 +1,7 @@
 #include "ge/sp.h"
 #include "FileUtils.h"
 
-namespace sp { namespace utils {
+namespace ge { namespace utils {
 
 	String ReadFile(const String& filepath)
 	{

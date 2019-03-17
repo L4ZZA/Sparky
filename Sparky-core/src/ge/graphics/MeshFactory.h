@@ -8,7 +8,7 @@
 #include "ge/graphics/Material.h"
 #include "ge/graphics/API/VertexArray.h"
 
-namespace sp { namespace graphics { namespace MeshFactory {
+namespace ge { namespace graphics { namespace MeshFactory {
 
 	//
 	// TODO: Return a Mesh instead of a VertexArray

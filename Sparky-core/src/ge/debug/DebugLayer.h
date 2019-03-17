@@ -15,7 +15,7 @@
 #include "ge/graphics/Sprite.h"
 #include "ge/graphics/API/Texture2D.h"
 
-namespace sp { namespace debug {
+namespace ge { namespace debug {
 
 	class SP_API DebugLayer : public graphics::Layer2D
 	{

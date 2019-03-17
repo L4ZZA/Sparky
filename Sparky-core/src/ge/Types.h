@@ -14,7 +14,7 @@ typedef uint8	byte;
 typedef uint32	uint;
 
 // Sparky Class Forward-Declarations
-namespace sp {
+namespace ge {
 	namespace graphics {
 	}
 }

@@ -8,7 +8,7 @@
 
 #include "ge/maths/maths.h"
 
-namespace sp { namespace debug {
+namespace ge { namespace debug {
 
 	struct IAction
 	{
