@@ -1,4 +1,4 @@
-#include "ge/sp.h"
+#include "ge/pch.h"
 #include "ImageLoad.h"
 
 #include <FreeImage.h>

@@ -1,4 +1,4 @@
-#include "ge/sp.h"
+#include "ge/pch.h"
 #include "TransformComponent.h"
 
 namespace ge { namespace entity { namespace component {
