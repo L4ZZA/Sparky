@@ -2,12 +2,9 @@
 #include "Sound.h"
 #include "SoundManager.h"
 
-#ifdef SPARKY_PLATFORM_WEB
-	#include <emscripten/emscripten.h>
-#else
+
 	#include <ga.h>
 	#include <gau.h>
-#endif
 
 namespace ge { namespace audio {
 
@@ -20,46 +17,33 @@ namespace ge { namespace audio {
 			std::cout << "[Sound] Invalid file name '" << m_Filename << "'!" << std::endl;
 			return;
 		}
-#ifdef SPARKY_PLATFORM_WEB
-#else
+
 		m_Sound = gau_load_sound_file(filename.c_str(), split.back().c_str());
 		if (m_Sound == nullptr)
 			std::cout << "[Sound] Could not load file '" << m_Filename << "'!" << std::endl;
-#endif
 	}
 
 	Sound::~Sound()
 	{
-#ifdef SPARKY_PLATFORM_WEB
-#else
 		ga_sound_release(m_Sound);
-#endif
 	}
 
 	void Sound::Play()
 	{
-#ifdef SPARKY_PLATFORM_WEB
-		SoundManagerPlay(m_Name.c_str());
-#else
 		gc_int32 quit = 0;
 		m_Handle = gau_create_handle_sound(SoundManager::m_Mixer, m_Sound, &destroy_on_finish, &quit, NULL);
 		m_Handle->sound = this;
 		ga_handle_play(m_Handle);
 		m_Count++;
-#endif
 		m_Playing = true;
 	}
 
 	void Sound::Loop()
 	{
-#ifdef SPARKY_PLATFORM_WEB
-		SoundManagerLoop(m_Name.c_str());
-#else
 		gc_int32 quit = 0;
 		m_Handle = gau_create_handle_sound(SoundManager::m_Mixer, m_Sound, &loop_on_finish, &quit, NULL);
 		m_Handle->sound = this;
 		ga_handle_play(m_Handle);
-#endif
 		m_Playing = true;
 	}
 
@@ -69,11 +53,7 @@ namespace ge { namespace audio {
 			return;
 
 		m_Playing = true;
-#ifdef SPARKY_PLATFORM_WEB
-		SoundManagerPlay(m_Name.c_str());
-#else
 		ga_handle_play(m_Handle);
-#endif
 	}
 
 	void Sound::Pause()
@@ -82,11 +62,7 @@ namespace ge { namespace audio {
 			return;
 
 		m_Playing = false;
-#ifdef SPARKY_PLATFORM_WEB
-		SoundManagerPause(m_Name.c_str());
-#else
 		ga_handle_stop(m_Handle);
-#endif
 	}
 
 	void Sound::Stop()
@@ -94,11 +70,7 @@ namespace ge { namespace audio {
 		if (!m_Playing)
 			return;
 
-#ifdef SPARKY_PLATFORM_WEB
-		SoundManagerStop(m_Name.c_str());
-#else
 		ga_handle_stop(m_Handle);
-#endif
 		m_Playing = false;
 	}
 
@@ -110,15 +82,10 @@ namespace ge { namespace audio {
 			return;
 		}
 		m_Gain = gain;
-#ifdef SPARKY_PLATFORM_WEB
-		SoundManagerSetGain(m_Name.c_str(), gain);
-#else
 		ga_handle_setParamf(m_Handle, GA_HANDLE_PARAM_GAIN, gain);
-#endif
 	}
 
-#ifdef SPARKY_PLATFORM_WEB
-#else
+
 	void destroy_on_finish(ga_Handle* in_handle, void* in_context)
 	{
 		Sound* sound = (Sound*)in_handle->sound;
@@ -133,6 +100,5 @@ namespace ge { namespace audio {
 		sound->Loop();
 		ga_handle_destroy(in_handle);
 	}
-#endif
 
 } }
