@@ -83,7 +83,7 @@
       <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
       <AdditionalIncludeDirectories>src</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -112,7 +112,7 @@ xcopy /f /y "$(SolutionDir)Dependencies\OpenAL\bin\x86\OpenAL32.dll" "$(Solution
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <AdditionalIncludeDirectories>src</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -144,7 +144,7 @@ xcopy /f /y "$(SolutionDir)Dependencies\OpenAL\bin\x86\OpenAL32.dll" "$(Solution
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <AdditionalIncludeDirectories>src</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -162,633 +162,604 @@ xcopy /f /y $"(SolutionDir)Dependencies\OpenAL\bin\x86\OpenAL32.dll" "$(Solution
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\sp\app\Input.cpp" />
-    <ClCompile Include="src\sp\debug\DebugMenuItem.cpp" />
-    <ClCompile Include="src\sp\debug\DebugMenuSlider.cpp" />
-    <ClCompile Include="src\sp\entity\component\SpriteComponent.cpp" />
-    <ClCompile Include="src\sp\events\WindowEvent.cpp" />
-    <ClCompile Include="src\sp\graphics\API\Texture2D.cpp" />
-    <ClCompile Include="src\sp\graphics\API\TextureCube.cpp" />
-    <ClCompile Include="src\sp\graphics\API\TextureDepth.cpp" />
-    <ClCompile Include="src\sp\graphics\API\VertexBuffer.cpp" />
-    <ClCompile Include="src\sp\graphics\camera\FPSCamera.cpp" />
-    <ClCompile Include="src\sp\debug\DebugRenderer.cpp">
+    <ClCompile Include="src\ge\app\Input.cpp" />
+    <ClCompile Include="src\ge\debug\DebugMenuItem.cpp" />
+    <ClCompile Include="src\ge\debug\DebugMenuSlider.cpp" />
+    <ClCompile Include="src\ge\entity\component\SpriteComponent.cpp" />
+    <ClCompile Include="src\ge\events\WindowEvent.cpp" />
+    <ClCompile Include="src\ge\graphics\API\Texture2D.cpp" />
+    <ClCompile Include="src\ge\graphics\API\TextureCube.cpp" />
+    <ClCompile Include="src\ge\graphics\API\TextureDepth.cpp" />
+    <ClCompile Include="src\ge\graphics\API\VertexBuffer.cpp" />
+    <ClCompile Include="src\ge\graphics\camera\FPSCamera.cpp" />
+    <ClCompile Include="src\ge\debug\DebugRenderer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\API\Context.cpp" />
-    <ClCompile Include="src\sp\graphics\camera\OrthographicCamera.cpp" />
-    <ClCompile Include="src\sp\graphics\DeferredRenderer.cpp" />
-    <ClCompile Include="src\sp\graphics\API\Framebuffer2D.cpp" />
-    <ClCompile Include="src\sp\graphics\API\FramebufferDepth.cpp" />
-    <ClCompile Include="src\sp\graphics\GBuffer.cpp" />
-    <ClCompile Include="src\sp\graphics\Light.cpp" />
-    <ClCompile Include="src\sp\graphics\LightSetup.cpp" />
-    <ClCompile Include="src\sp\graphics\Model.cpp" />
-    <ClCompile Include="src\sp\graphics\PBRMaterial.cpp" />
-    <ClCompile Include="src\sp\graphics\postfx\PostEffects.cpp" />
-    <ClCompile Include="src\sp\graphics\postfx\PostEffectsPass.cpp" />
-    <ClCompile Include="src\sp\graphics\Renderable2D.cpp" />
-    <ClCompile Include="src\sp\graphics\Renderer.cpp" />
-    <ClCompile Include="src\sp\graphics\shaders\ShaderManager.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXFramebufferDepth.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXRenderer.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXShaderResource.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXShaderUniform.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXTexture2D.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXIndexBuffer.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXTextureCube.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXTextureDepth.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXFramebuffer2D.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLError.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLFramebuffer2D.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLFramebufferDepth.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLRenderer.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLTexture2D.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLTextureCube.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLTextureDepth.cpp" />
-    <ClCompile Include="src\sp\graphics\ui\Button.cpp" />
-    <ClCompile Include="src\sp\graphics\ui\Panel.cpp" />
-    <ClCompile Include="src\sp\graphics\ui\Slider.cpp" />
-    <ClCompile Include="src\sp\graphics\ui\Widget.cpp" />
-    <ClCompile Include="src\sp\maths\Rectangle.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXVertexBuffer.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXContext.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXShader.cpp" />
-    <ClCompile Include="src\sp\platform\directx\DXVertexArray.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLVertexBuffer.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLContext.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLShader.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLShaderResource.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLVertexArray.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLShaderUniform.cpp" />
-    <ClCompile Include="src\sp\platform\opengl\GLIndexBuffer.cpp" />
-    <ClCompile Include="src\sp\platform\posix\PosixTimer.cpp">
+    <ClCompile Include="src\ge\graphics\API\Context.cpp" />
+    <ClCompile Include="src\ge\graphics\camera\OrthographicCamera.cpp" />
+    <ClCompile Include="src\ge\graphics\DeferredRenderer.cpp" />
+    <ClCompile Include="src\ge\graphics\API\Framebuffer2D.cpp" />
+    <ClCompile Include="src\ge\graphics\API\FramebufferDepth.cpp" />
+    <ClCompile Include="src\ge\graphics\GBuffer.cpp" />
+    <ClCompile Include="src\ge\graphics\Light.cpp" />
+    <ClCompile Include="src\ge\graphics\LightSetup.cpp" />
+    <ClCompile Include="src\ge\graphics\Model.cpp" />
+    <ClCompile Include="src\ge\graphics\PBRMaterial.cpp" />
+    <ClCompile Include="src\ge\graphics\postfx\PostEffects.cpp" />
+    <ClCompile Include="src\ge\graphics\postfx\PostEffectsPass.cpp" />
+    <ClCompile Include="src\ge\graphics\Renderable2D.cpp" />
+    <ClCompile Include="src\ge\graphics\Renderer.cpp" />
+    <ClCompile Include="src\ge\graphics\shaders\ShaderManager.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLError.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLFramebuffer2D.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLFramebufferDepth.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLRenderer.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLTexture2D.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLTextureCube.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLTextureDepth.cpp" />
+    <ClCompile Include="src\ge\graphics\ui\Button.cpp" />
+    <ClCompile Include="src\ge\graphics\ui\Panel.cpp" />
+    <ClCompile Include="src\ge\graphics\ui\Slider.cpp" />
+    <ClCompile Include="src\ge\graphics\ui\Widget.cpp" />
+    <ClCompile Include="src\ge\maths\Rectangle.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLVertexBuffer.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLContext.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLShader.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLShaderResource.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLVertexArray.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLShaderUniform.cpp" />
+    <ClCompile Include="src\ge\platform\opengl\GLIndexBuffer.cpp" />
+    <ClCompile Include="src\ge\platform\posix\PosixTimer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="src\sp\platform\windows\Win32FileSystem.cpp" />
-    <ClCompile Include="src\sp\platform\windows\Win32Input.cpp" />
-    <ClCompile Include="src\sp\platform\windows\Win32Timer.cpp">
+    <ClCompile Include="src\ge\platform\windows\Win32FileSystem.cpp" />
+    <ClCompile Include="src\ge\platform\windows\Win32Input.cpp" />
+    <ClCompile Include="src\ge\platform\windows\Win32Timer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="src\sp\app\Application.cpp">
+    <ClCompile Include="src\ge\app\Application.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\audio\Sound.cpp">
+    <ClCompile Include="src\ge\audio\Sound.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\audio\SoundManager.cpp">
+    <ClCompile Include="src\ge\audio\SoundManager.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\debug\DebugLayer.cpp" />
-    <ClCompile Include="src\sp\debug\DebugMenu.cpp" />
-    <ClCompile Include="src\sp\embedded\Embedded.cpp">
+    <ClCompile Include="src\ge\debug\DebugLayer.cpp" />
+    <ClCompile Include="src\ge\debug\DebugMenu.cpp" />
+    <ClCompile Include="src\ge\embedded\Embedded.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\entity\component\Component.cpp">
+    <ClCompile Include="src\ge\entity\component\Component.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\entity\component\MeshComponent.cpp">
+    <ClCompile Include="src\ge\entity\component\MeshComponent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\entity\component\TransformComponent.cpp">
+    <ClCompile Include="src\ge\entity\component\TransformComponent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\entity\Entity.cpp">
+    <ClCompile Include="src\ge\entity\Entity.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\events\Event.cpp">
+    <ClCompile Include="src\ge\events\Event.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\events\KeyEvent.cpp">
+    <ClCompile Include="src\ge\events\KeyEvent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\events\MouseEvent.cpp">
+    <ClCompile Include="src\ge\events\MouseEvent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\Renderer2D.cpp">
+    <ClCompile Include="src\ge\graphics\Renderer2D.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\API\BufferLayout.cpp">
+    <ClCompile Include="src\ge\graphics\API\BufferLayout.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\API\IndexBuffer.cpp">
+    <ClCompile Include="src\ge\graphics\API\IndexBuffer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\API\VertexArray.cpp">
+    <ClCompile Include="src\ge\graphics\API\VertexArray.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\camera\Camera.cpp">
+    <ClCompile Include="src\ge\graphics\camera\Camera.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\camera\MayaCamera.cpp">
+    <ClCompile Include="src\ge\graphics\camera\MayaCamera.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\Font.cpp">
+    <ClCompile Include="src\ge\graphics\Font.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\FontManager.cpp">
+    <ClCompile Include="src\ge\graphics\FontManager.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\ForwardRenderer.cpp">
+    <ClCompile Include="src\ge\graphics\ForwardRenderer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\API\Framebuffer.cpp">
+    <ClCompile Include="src\ge\graphics\API\Framebuffer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\Label.cpp">
+    <ClCompile Include="src\ge\graphics\Label.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\layers\Group.cpp">
+    <ClCompile Include="src\ge\graphics\layers\Group.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\layers\Layer.cpp">
+    <ClCompile Include="src\ge\graphics\layers\Layer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\layers\Layer2D.cpp">
+    <ClCompile Include="src\ge\graphics\layers\Layer2D.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\layers\Layer3D.cpp">
+    <ClCompile Include="src\ge\graphics\layers\Layer3D.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\Material.cpp">
+    <ClCompile Include="src\ge\graphics\Material.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\Mesh.cpp">
+    <ClCompile Include="src\ge\graphics\Mesh.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\MeshFactory.cpp">
+    <ClCompile Include="src\ge\graphics\MeshFactory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\OBJModel.cpp">
+    <ClCompile Include="src\ge\graphics\OBJModel.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\Scene.cpp">
+    <ClCompile Include="src\ge\graphics\Scene.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\shaders\Shader.cpp">
+    <ClCompile Include="src\ge\graphics\shaders\Shader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\shaders\ShaderFactory.cpp">
+    <ClCompile Include="src\ge\graphics\shaders\ShaderFactory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\shaders\ShaderUniform.cpp">
+    <ClCompile Include="src\ge\graphics\shaders\ShaderUniform.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\Sprite.cpp">
+    <ClCompile Include="src\ge\graphics\Sprite.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\API\Texture.cpp">
+    <ClCompile Include="src\ge\graphics\API\Texture.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\graphics\TextureManager.cpp">
+    <ClCompile Include="src\ge\graphics\TextureManager.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\app\Window.cpp">
+    <ClCompile Include="src\ge\app\Window.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\maths\AABB.cpp">
+    <ClCompile Include="src\ge\maths\AABB.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\maths\mat4.cpp">
+    <ClCompile Include="src\ge\maths\mat4.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\maths\Quaternion.cpp">
+    <ClCompile Include="src\ge\maths\Quaternion.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\maths\vec2.cpp">
+    <ClCompile Include="src\ge\maths\vec2.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\maths\vec3.cpp">
+    <ClCompile Include="src\ge\maths\vec3.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\maths\vec4.cpp">
+    <ClCompile Include="src\ge\maths\vec4.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\platform\windows\Win32Application.cpp">
+    <ClCompile Include="src\ge\platform\windows\Win32Application.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\platform\windows\Win32Log.cpp">
+    <ClCompile Include="src\ge\platform\windows\Win32Log.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\platform\windows\Win32Window.cpp">
+    <ClCompile Include="src\ge\platform\windows\Win32Window.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\Scene2D.cpp" />
-    <ClCompile Include="src\sp\sp.cpp">
+    <ClCompile Include="src\ge\Scene2D.cpp" />
+    <ClCompile Include="src\ge\sp.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\String.cpp">
+    <ClCompile Include="src\ge\String.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">ge/sp.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sp/sp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ge/sp.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="src\sp\system\Allocator.cpp" />
-    <ClCompile Include="src\sp\system\FileSystem.cpp" />
-    <ClCompile Include="src\sp\system\Memory.cpp" />
-    <ClCompile Include="src\sp\system\MemoryManager.cpp" />
-    <ClCompile Include="src\sp\system\System.cpp" />
-    <ClCompile Include="src\sp\system\VFS.cpp" />
-    <ClCompile Include="src\sp\utils\FileUtils.cpp" />
-    <ClCompile Include="src\sp\utils\ImageLoad.cpp" />
+    <ClCompile Include="src\ge\system\Allocator.cpp" />
+    <ClCompile Include="src\ge\system\FileSystem.cpp" />
+    <ClCompile Include="src\ge\system\Memory.cpp" />
+    <ClCompile Include="src\ge\system\MemoryManager.cpp" />
+    <ClCompile Include="src\ge\system\System.cpp" />
+    <ClCompile Include="src\ge\system\VFS.cpp" />
+    <ClCompile Include="src\ge\utils\FileUtils.cpp" />
+    <ClCompile Include="src\ge\utils\ImageLoad.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\sp\app\Input.h" />
-    <ClInclude Include="src\sp\debug\DebugMenuAction.h" />
-    <ClInclude Include="src\sp\debug\DebugMenuItem.h" />
-    <ClInclude Include="src\sp\debug\DebugMenuSlider.h" />
-    <ClInclude Include="src\sp\entity\component\SpriteComponent.h" />
-    <ClInclude Include="src\sp\events\WindowEvent.h" />
-    <ClInclude Include="src\sp\graphics\API\VertexBuffer.h" />
-    <ClInclude Include="src\sp\graphics\camera\FPSCamera.h" />
-    <ClInclude Include="src\sp\debug\DebugRenderer.h" />
-    <ClInclude Include="src\sp\graphics\API\Context.h" />
-    <ClInclude Include="src\sp\graphics\camera\OrthographicCamera.h" />
-    <ClInclude Include="src\sp\graphics\DeferredRenderer.h" />
-    <ClInclude Include="src\sp\graphics\API\Framebuffer2D.h" />
-    <ClInclude Include="src\sp\graphics\API\FramebufferDepth.h" />
-    <ClInclude Include="src\sp\graphics\GBuffer.h" />
-    <ClInclude Include="src\sp\graphics\Light.h" />
-    <ClInclude Include="src\sp\graphics\LightSetup.h" />
-    <ClInclude Include="src\sp\graphics\PBRMaterial.h" />
-    <ClInclude Include="src\sp\graphics\postfx\PostEffects.h" />
-    <ClInclude Include="src\sp\graphics\postfx\PostEffectsPass.h" />
-    <ClInclude Include="src\sp\graphics\Renderer.h" />
-    <ClInclude Include="src\sp\graphics\shaders\ShaderManager.h" />
-    <ClInclude Include="src\sp\graphics\shaders\ShaderResource.h" />
-    <ClInclude Include="src\sp\graphics\API\Texture2D.h" />
-    <ClInclude Include="src\sp\graphics\API\TextureCube.h" />
-    <ClInclude Include="src\sp\graphics\API\TextureDepth.h" />
-    <ClInclude Include="src\sp\graphics\ui\Button.h" />
-    <ClInclude Include="src\sp\graphics\ui\Panel.h" />
-    <ClInclude Include="src\sp\graphics\ui\Slider.h" />
-    <ClInclude Include="src\sp\graphics\ui\Widget.h" />
-    <ClInclude Include="src\sp\maths\Rectangle.h" />
-    <ClInclude Include="src\sp\platform\directx\DXCommon.h" />
-    <ClInclude Include="src\sp\platform\directx\DXContext.h" />
-    <ClInclude Include="src\sp\platform\directx\DXFramebufferDepth.h" />
-    <ClInclude Include="src\sp\platform\directx\DXRenderer.h" />
-    <ClInclude Include="src\sp\platform\directx\DXShader.h" />
-    <ClInclude Include="src\sp\platform\directx\DXShaderResource.h" />
-    <ClInclude Include="src\sp\platform\directx\DXShaderUniform.h" />
-    <ClInclude Include="src\sp\platform\directx\DXTexture2D.h" />
-    <ClInclude Include="src\sp\platform\directx\DXTextureCube.h" />
-    <ClInclude Include="src\sp\platform\directx\DXTextureDepth.h" />
-    <ClInclude Include="src\sp\platform\directx\DXTextureHandle.h" />
-    <ClInclude Include="src\sp\platform\directx\DXTypes.h" />
-    <ClInclude Include="src\sp\platform\directx\DXVertexArray.h" />
-    <ClInclude Include="src\sp\platform\directx\DXVertexBuffer.h" />
-    <ClInclude Include="src\sp\platform\directx\DXIndexBuffer.h" />
-    <ClInclude Include="src\sp\platform\directx\DXFramebuffer2D.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLFramebuffer2D.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLFramebufferDepth.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLRenderer.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLCommon.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLContext.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLIndexBuffer.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLShader.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLShaderUniform.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLShaderResource.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLTexture2D.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLTextureCube.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLTextureDepth.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLTypes.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLVertexArray.h" />
-    <ClInclude Include="src\sp\platform\opengl\GLVertexBuffer.h" />
+    <ClInclude Include="src\ge\app\Input.h" />
+    <ClInclude Include="src\ge\debug\DebugMenuAction.h" />
+    <ClInclude Include="src\ge\debug\DebugMenuItem.h" />
+    <ClInclude Include="src\ge\debug\DebugMenuSlider.h" />
+    <ClInclude Include="src\ge\entity\component\SpriteComponent.h" />
+    <ClInclude Include="src\ge\events\WindowEvent.h" />
+    <ClInclude Include="src\ge\graphics\API\VertexBuffer.h" />
+    <ClInclude Include="src\ge\graphics\camera\FPSCamera.h" />
+    <ClInclude Include="src\ge\debug\DebugRenderer.h" />
+    <ClInclude Include="src\ge\graphics\API\Context.h" />
+    <ClInclude Include="src\ge\graphics\camera\OrthographicCamera.h" />
+    <ClInclude Include="src\ge\graphics\DeferredRenderer.h" />
+    <ClInclude Include="src\ge\graphics\API\Framebuffer2D.h" />
+    <ClInclude Include="src\ge\graphics\API\FramebufferDepth.h" />
+    <ClInclude Include="src\ge\graphics\GBuffer.h" />
+    <ClInclude Include="src\ge\graphics\Light.h" />
+    <ClInclude Include="src\ge\graphics\LightSetup.h" />
+    <ClInclude Include="src\ge\graphics\PBRMaterial.h" />
+    <ClInclude Include="src\ge\graphics\postfx\PostEffects.h" />
+    <ClInclude Include="src\ge\graphics\postfx\PostEffectsPass.h" />
+    <ClInclude Include="src\ge\graphics\Renderer.h" />
+    <ClInclude Include="src\ge\graphics\shaders\ShaderManager.h" />
+    <ClInclude Include="src\ge\graphics\shaders\ShaderResource.h" />
+    <ClInclude Include="src\ge\graphics\API\Texture2D.h" />
+    <ClInclude Include="src\ge\graphics\API\TextureCube.h" />
+    <ClInclude Include="src\ge\graphics\API\TextureDepth.h" />
+    <ClInclude Include="src\ge\graphics\ui\Button.h" />
+    <ClInclude Include="src\ge\graphics\ui\Panel.h" />
+    <ClInclude Include="src\ge\graphics\ui\Slider.h" />
+    <ClInclude Include="src\ge\graphics\ui\Widget.h" />
+    <ClInclude Include="src\ge\maths\Rectangle.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLFramebuffer2D.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLFramebufferDepth.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLRenderer.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLCommon.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLContext.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLIndexBuffer.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLShader.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLShaderUniform.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLShaderResource.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLTexture2D.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLTextureCube.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLTextureDepth.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLTypes.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLVertexArray.h" />
+    <ClInclude Include="src\ge\platform\opengl\GLVertexBuffer.h" />
     <ClInclude Include="src\Sparky.h" />
-    <ClInclude Include="src\sp\app\Application.h" />
-    <ClInclude Include="src\sp\audio\Sound.h" />
-    <ClInclude Include="src\sp\audio\SoundManager.h" />
-    <ClInclude Include="src\sp\Common.h" />
-    <ClInclude Include="src\sp\debug\DebugLayer.h" />
-    <ClInclude Include="src\sp\debug\DebugMenu.h" />
-    <ClInclude Include="src\sp\embedded\Embedded.h" />
-    <ClInclude Include="src\sp\entity\component\Component.h" />
-    <ClInclude Include="src\sp\entity\component\Components.h" />
-    <ClInclude Include="src\sp\entity\component\MeshComponent.h" />
-    <ClInclude Include="src\sp\entity\component\TransformComponent.h" />
-    <ClInclude Include="src\sp\entity\Entity.h" />
-    <ClInclude Include="src\sp\events\Event.h" />
-    <ClInclude Include="src\sp\events\EventDispatcher.h" />
-    <ClInclude Include="src\sp\events\Events.h" />
-    <ClInclude Include="src\sp\events\IEventListener.h" />
-    <ClInclude Include="src\sp\events\KeyEvent.h" />
-    <ClInclude Include="src\sp\events\MouseEvent.h" />
-    <ClInclude Include="src\sp\graphics\Renderer2D.h" />
+    <ClInclude Include="src\ge\app\Application.h" />
+    <ClInclude Include="src\ge\audio\Sound.h" />
+    <ClInclude Include="src\ge\audio\SoundManager.h" />
+    <ClInclude Include="src\ge\Common.h" />
+    <ClInclude Include="src\ge\debug\DebugLayer.h" />
+    <ClInclude Include="src\ge\debug\DebugMenu.h" />
+    <ClInclude Include="src\ge\embedded\Embedded.h" />
+    <ClInclude Include="src\ge\entity\component\Component.h" />
+    <ClInclude Include="src\ge\entity\component\Components.h" />
+    <ClInclude Include="src\ge\entity\component\MeshComponent.h" />
+    <ClInclude Include="src\ge\entity\component\TransformComponent.h" />
+    <ClInclude Include="src\ge\entity\Entity.h" />
+    <ClInclude Include="src\ge\events\Event.h" />
+    <ClInclude Include="src\ge\events\EventDispatcher.h" />
+    <ClInclude Include="src\ge\events\Events.h" />
+    <ClInclude Include="src\ge\events\IEventListener.h" />
+    <ClInclude Include="src\ge\events\KeyEvent.h" />
+    <ClInclude Include="src\ge\events\MouseEvent.h" />
+    <ClInclude Include="src\ge\graphics\Renderer2D.h" />
     <ClInclude Include="src\sp\graphics\buffers\Buffer.h" />
-    <ClInclude Include="src\sp\graphics\API\BufferLayout.h" />
-    <ClInclude Include="src\sp\graphics\API\IndexBuffer.h" />
-    <ClInclude Include="src\sp\graphics\API\VertexArray.h" />
-    <ClInclude Include="src\sp\graphics\camera\Camera.h" />
-    <ClInclude Include="src\sp\graphics\camera\MayaCamera.h" />
-    <ClInclude Include="src\sp\graphics\Font.h" />
-    <ClInclude Include="src\sp\graphics\FontManager.h" />
-    <ClInclude Include="src\sp\graphics\ForwardRenderer.h" />
-    <ClInclude Include="src\sp\graphics\API\Framebuffer.h" />
-    <ClInclude Include="src\sp\graphics\IRenderable.h" />
-    <ClInclude Include="src\sp\graphics\Label.h" />
-    <ClInclude Include="src\sp\graphics\layers\Group.h" />
-    <ClInclude Include="src\sp\graphics\layers\Layer.h" />
-    <ClInclude Include="src\sp\graphics\layers\Layer2D.h" />
-    <ClInclude Include="src\sp\graphics\layers\Layer3D.h" />
-    <ClInclude Include="src\sp\graphics\Mask.h" />
-    <ClInclude Include="src\sp\graphics\Material.h" />
-    <ClInclude Include="src\sp\graphics\Mesh.h" />
-    <ClInclude Include="src\sp\graphics\MeshFactory.h" />
-    <ClInclude Include="src\sp\graphics\Model.h" />
-    <ClInclude Include="src\sp\graphics\Renderable2D.h" />
-    <ClInclude Include="src\sp\graphics\RenderCommand.h" />
-    <ClInclude Include="src\sp\graphics\Renderer3D.h" />
-    <ClInclude Include="src\sp\graphics\Scene.h" />
-    <ClInclude Include="src\sp\graphics\shaders\Shader.h" />
-    <ClInclude Include="src\sp\graphics\shaders\ShaderFactory.h" />
-    <ClInclude Include="src\sp\graphics\shaders\ShaderUniform.h" />
-    <ClInclude Include="src\sp\graphics\Sprite.h" />
-    <ClInclude Include="src\sp\graphics\API\Texture.h" />
-    <ClInclude Include="src\sp\graphics\TextureManager.h" />
-    <ClInclude Include="src\sp\app\Window.h" />
-    <ClInclude Include="src\sp\maths\AABB.h" />
-    <ClInclude Include="src\sp\maths\mat4.h" />
-    <ClInclude Include="src\sp\maths\maths.h" />
-    <ClInclude Include="src\sp\maths\maths_func.h" />
-    <ClInclude Include="src\sp\maths\Quaternion.h" />
-    <ClInclude Include="src\sp\maths\tvec2.h" />
-    <ClInclude Include="src\sp\maths\vec2.h" />
-    <ClInclude Include="src\sp\maths\vec3.h" />
-    <ClInclude Include="src\sp\maths\vec4.h" />
-    <ClCompile Include="src\sp\platform\windows\Win32MemoryManager.cpp" />
-    <ClInclude Include="src\sp\Scene2D.h" />
-    <ClInclude Include="src\sp\sp.h" />
-    <ClInclude Include="src\sp\String.h" />
-    <ClInclude Include="src\sp\system\Allocator.h" />
-    <ClInclude Include="src\sp\system\FileSystem.h" />
-    <ClInclude Include="src\sp\system\Memory.h" />
-    <ClInclude Include="src\sp\system\MemoryManager.h" />
-    <ClInclude Include="src\sp\system\System.h" />
-    <ClInclude Include="src\sp\system\VFS.h" />
-    <ClInclude Include="src\sp\Types.h" />
-    <ClInclude Include="src\sp\utils\FileUtils.h" />
-    <ClInclude Include="src\sp\utils\ImageLoad.h" />
-    <ClInclude Include="src\sp\utils\Log.h" />
-    <ClInclude Include="src\sp\utils\Timer.h" />
-    <ClInclude Include="src\sp\utils\Timestep.h" />
+    <ClInclude Include="src\ge\graphics\API\BufferLayout.h" />
+    <ClInclude Include="src\ge\graphics\API\IndexBuffer.h" />
+    <ClInclude Include="src\ge\graphics\API\VertexArray.h" />
+    <ClInclude Include="src\ge\graphics\camera\Camera.h" />
+    <ClInclude Include="src\ge\graphics\camera\MayaCamera.h" />
+    <ClInclude Include="src\ge\graphics\Font.h" />
+    <ClInclude Include="src\ge\graphics\FontManager.h" />
+    <ClInclude Include="src\ge\graphics\ForwardRenderer.h" />
+    <ClInclude Include="src\ge\graphics\API\Framebuffer.h" />
+    <ClInclude Include="src\ge\graphics\IRenderable.h" />
+    <ClInclude Include="src\ge\graphics\Label.h" />
+    <ClInclude Include="src\ge\graphics\layers\Group.h" />
+    <ClInclude Include="src\ge\graphics\layers\Layer.h" />
+    <ClInclude Include="src\ge\graphics\layers\Layer2D.h" />
+    <ClInclude Include="src\ge\graphics\layers\Layer3D.h" />
+    <ClInclude Include="src\ge\graphics\Mask.h" />
+    <ClInclude Include="src\ge\graphics\Material.h" />
+    <ClInclude Include="src\ge\graphics\Mesh.h" />
+    <ClInclude Include="src\ge\graphics\MeshFactory.h" />
+    <ClInclude Include="src\ge\graphics\Model.h" />
+    <ClInclude Include="src\ge\graphics\Renderable2D.h" />
+    <ClInclude Include="src\ge\graphics\RenderCommand.h" />
+    <ClInclude Include="src\ge\graphics\Renderer3D.h" />
+    <ClInclude Include="src\ge\graphics\Scene.h" />
+    <ClInclude Include="src\ge\graphics\shaders\Shader.h" />
+    <ClInclude Include="src\ge\graphics\shaders\ShaderFactory.h" />
+    <ClInclude Include="src\ge\graphics\shaders\ShaderUniform.h" />
+    <ClInclude Include="src\ge\graphics\Sprite.h" />
+    <ClInclude Include="src\ge\graphics\API\Texture.h" />
+    <ClInclude Include="src\ge\graphics\TextureManager.h" />
+    <ClInclude Include="src\ge\app\Window.h" />
+    <ClInclude Include="src\ge\maths\AABB.h" />
+    <ClInclude Include="src\ge\maths\mat4.h" />
+    <ClInclude Include="src\ge\maths\maths.h" />
+    <ClInclude Include="src\ge\maths\maths_func.h" />
+    <ClInclude Include="src\ge\maths\Quaternion.h" />
+    <ClInclude Include="src\ge\maths\tvec2.h" />
+    <ClInclude Include="src\ge\maths\vec2.h" />
+    <ClInclude Include="src\ge\maths\vec3.h" />
+    <ClInclude Include="src\ge\maths\vec4.h" />
+    <ClCompile Include="src\ge\platform\windows\Win32MemoryManager.cpp" />
+    <ClInclude Include="src\ge\Scene2D.h" />
+    <ClInclude Include="src\ge\sp.h" />
+    <ClInclude Include="src\ge\String.h" />
+    <ClInclude Include="src\ge\system\Allocator.h" />
+    <ClInclude Include="src\ge\system\FileSystem.h" />
+    <ClInclude Include="src\ge\system\Memory.h" />
+    <ClInclude Include="src\ge\system\MemoryManager.h" />
+    <ClInclude Include="src\ge\system\System.h" />
+    <ClInclude Include="src\ge\system\VFS.h" />
+    <ClInclude Include="src\ge\Types.h" />
+    <ClInclude Include="src\ge\utils\FileUtils.h" />
+    <ClInclude Include="src\ge\utils\ImageLoad.h" />
+    <ClInclude Include="src\ge\utils\Log.h" />
+    <ClInclude Include="src\ge\utils\Timer.h" />
+    <ClInclude Include="src\ge\utils\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="SparkyCore-TODO.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\sp\embedded\files\SourceSansPro-Light.embed" />
-    <None Include="src\sp\graphics\shaders\default\Debug.shader" />
-    <None Include="src\sp\graphics\shaders\default\GeometryPass.shader" />
-    <None Include="src\sp\graphics\shaders\default\BasicLight.shader" />
-    <None Include="src\sp\platform\opengl\shaders\BatchRenderer.shader" />
-    <None Include="src\sp\graphics\shaders\default\gles\Default.shader" />
-    <None Include="src\sp\graphics\shaders\default\gles\Simple.shader" />
-    <None Include="src\sp\graphics\shaders\default\Simple.shader" />
+    <None Include="src\ge\embedded\files\SourceSansPro-Light.embed" />
+    <None Include="src\ge\graphics\shaders\default\Debug.shader" />
+    <None Include="src\ge\graphics\shaders\default\GeometryPass.shader" />
+    <None Include="src\ge\graphics\shaders\default\BasicLight.shader" />
+    <None Include="src\ge\platform\opengl\shaders\BatchRenderer.shader" />
+    <None Include="src\ge\graphics\shaders\default\gles\Default.shader" />
+    <None Include="src\ge\graphics\shaders\default\gles\Simple.shader" />
+    <None Include="src\ge\graphics\shaders\default\Simple.shader" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dependencies\Box2D\Box2D.vcxproj">
@@ -803,13 +774,6 @@ xcopy /f /y $"(SolutionDir)Dependencies\OpenAL\bin\x86\OpenAL32.dll" "$(Solution
     <ProjectReference Include="..\Dependencies\gorilla-audio\gorilla-audio.vcxproj">
       <Project>{e9a0f826-3688-4461-8e49-7ccc543f9e40}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <FxCompile Include="src\sp\platform\directx\shaders\BatchRenderer.hlsl">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Emscripten|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
