@@ -5,10 +5,8 @@
 #include "ge/Types.h"
 #include "ge/String.h"
 
-#ifndef SP_PLATFORM_WEB
-	struct ga_Sound;
-	struct ga_Handle;
-#endif
+struct ga_Sound;
+struct ga_Handle;
 
 namespace ge { namespace audio {
 
@@ -44,11 +42,8 @@ namespace ge { namespace audio {
 		inline const String& GetName() const { return m_Name; }
 		inline const String& GetFileName() const { return m_Filename; }
 
-#ifdef SPARKY_PLATFORM_WEB
-#else
 		friend void destroy_on_finish(ga_Handle* in_handle, void* in_context);
 		friend void loop_on_finish(ga_Handle* in_handle, void* in_context);
-#endif
 
 	};
 
